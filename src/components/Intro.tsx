@@ -265,9 +265,6 @@ export default function Intro({
               >
                 નવા વર્ષના રામ રામ
               </p>
-              <p className="mt-1.5 font-display text-xs tracking-[0.28em] text-[#C99A45]/7 uppercase sm:mt-2 sm:text-sm">
-                Happy New Year 2027
-              </p>
             </motion.div>
 
             <motion.button
