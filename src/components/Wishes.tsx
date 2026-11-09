@@ -134,7 +134,7 @@ export default function Wishes() {
       />
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHead
-          eyebrow="Wishes For Everyone"
+          eyebrow=""
           title="આ નવા વર્ષે દરેકને મળે..."
         />
         <div className="mt-6 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3">

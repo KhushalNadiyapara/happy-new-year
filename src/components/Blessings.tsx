@@ -38,7 +38,7 @@ export default function Blessings() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6">
         <SectionHead
-          eyebrow="Divine Blessings"
+          eyebrow=""
           title="ભગવાનના આશીર્વાદ સદાય તમારી સાથે રહે 🙏"
         />
 
