@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/static/js/bundle.js",
+    "static/js/src_components_three_HeroCanvas_jsx.chunk.js": "/static/js/src_components_three_HeroCanvas_jsx.chunk.js",
+    "static/js/src_components_three_BlessingsCanvas_jsx.chunk.js": "/static/js/src_components_three_BlessingsCanvas_jsx.chunk.js",
+    "static/js/src_components_three_FinaleCanvas_jsx.chunk.js": "/static/js/src_components_three_FinaleCanvas_jsx.chunk.js",
+    "static/js/vendors-node_modules_react-three_fiber_dist_react-three-fiber_esm_js.chunk.js": "/static/js/vendors-node_modules_react-three_fiber_dist_react-three-fiber_esm_js.chunk.js",
+    "static/js/vendors-node_modules_react-three_drei_core_Environment_js.chunk.js": "/static/js/vendors-node_modules_react-three_drei_core_Environment_js.chunk.js",
+    "index.html": "/index.html",
+    "bundle.js.map": "/static/js/bundle.js.map",
+    "main.hot-update.js.map": "/main.6ca820c5c271f64756ab.hot-update.js.map",
+    "src_components_three_HeroCanvas_jsx.chunk.js.map": "/static/js/src_components_three_HeroCanvas_jsx.chunk.js.map",
+    "src_components_three_BlessingsCanvas_jsx.chunk.js.map": "/static/js/src_components_three_BlessingsCanvas_jsx.chunk.js.map",
+    "src_components_three_FinaleCanvas_jsx.chunk.js.map": "/static/js/src_components_three_FinaleCanvas_jsx.chunk.js.map",
+    "vendors-node_modules_react-three_fiber_dist_react-three-fiber_esm_js.chunk.js.map": "/static/js/vendors-node_modules_react-three_fiber_dist_react-three-fiber_esm_js.chunk.js.map",
+    "vendors-node_modules_react-three_drei_core_Environment_js.chunk.js.map": "/static/js/vendors-node_modules_react-three_drei_core_Environment_js.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/bundle.js",
+    "main.6ca820c5c271f64756ab.hot-update.js"
+  ]
+}

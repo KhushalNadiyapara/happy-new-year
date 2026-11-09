@@ -1,26 +1,298 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --ink: #100d0a;
+  --gold: #c99a45;
+  --ivory: #f5e6c8;
+  --amber: #d9a441;
+  --vermilion: #7b251f;
+  --brown: #24180f;
+  --background: var(--ink);
+  --foreground: var(--ivory);
 }
 
 @theme inline {
+  --color-ink: var(--ink);
+  --color-midnight: var(--ink);
+  --color-gold: var(--gold);
+  --color-ivory: var(--ivory);
+  --color-amber: var(--amber);
+  --color-vermilion: var(--vermilion);
+  --color-brown: var(--brown);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-gujarati: var(--font-noto-gujarati);
+  --font-gujarati-serif: var(--font-noto-serif-gujarati);
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-noto-gujarati);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #100d0a;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100%;
+  background: #100d0a;
+  color: #f5e6c8;
+  font-family: var(--font-cormorant), var(--font-noto-serif-gujarati),
+    var(--font-noto-gujarati), serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c99a45;
+  color: #100d0a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #100d0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a2c17;
+  border-radius: 8px;
+  border: 2px solid #100d0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c99a45;
+}
+
+.font-display {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-gujarati {
+  font-family: var(--font-noto-gujarati), "Noto Sans Gujarati", sans-serif;
+}
+
+.font-gujarati-serif {
+  font-family: var(--font-noto-serif-gujarati), "Noto Serif Gujarati", serif;
+}
+
+/* Metallic gold type — matches preview */
+.text-gold {
+  background: linear-gradient(
+    100deg,
+    #7a5a26 0%,
+    #c99a45 22%,
+    #f7eacb 50%,
+    #c99a45 78%,
+    #7a5a26 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shine 9s linear infinite;
+}
+
+@keyframes gold-shine {
+  to {
+    background-position: 220% center;
+  }
+}
+
+.text-gold-static {
+  background: linear-gradient(
+    100deg,
+    #a87b2f 0%,
+    #d9ab52 25%,
+    #f7eacb 50%,
+    #d9ab52 75%,
+    #a87b2f 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.signature-highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 154, 69, 0.45);
+  background: linear-gradient(
+    165deg,
+    rgba(36, 24, 15, 0.55),
+    rgba(16, 13, 10, 0.35)
+  );
+  box-shadow:
+    0 0 48px rgba(201, 154, 69, 0.42),
+    0 0 20px rgba(245, 230, 200, 0.16),
+    inset 0 0 24px rgba(217, 164, 65, 0.12);
+  backdrop-filter: blur(2px);
+}
+
+.signature-highlight--hero {
+  padding: 0.7rem 1.55rem 0.85rem;
+  border-color: rgba(201, 154, 69, 0.62);
+  box-shadow:
+    0 0 58px rgba(201, 154, 69, 0.55),
+    0 0 26px rgba(245, 230, 200, 0.22),
+    inset 0 0 26px rgba(217, 164, 65, 0.16);
+}
+
+.signature-highlight--finale {
+  flex-direction: column;
+  width: min(100%, 36rem);
+  padding: 1.35rem 1.75rem 1.5rem;
+  border-radius: 1.25rem;
+  border-color: rgba(201, 154, 69, 0.55);
+  box-shadow:
+    0 0 56px rgba(201, 154, 69, 0.48),
+    0 0 24px rgba(245, 230, 200, 0.18),
+    inset 0 0 28px rgba(217, 164, 65, 0.14);
+}
+
+.gold-hairline {
+  border: 1px solid rgba(201, 154, 69, 0.32);
+}
+
+.gold-glow {
+  box-shadow:
+    0 0 46px -10px rgba(201, 154, 69, 0.45),
+    inset 0 0 26px -14px rgba(201, 154, 69, 0.4);
+}
+
+.hover\:gold-glow:hover,
+.group:hover.gold-glow-on-hover {
+  box-shadow:
+    0 0 46px -10px rgba(201, 154, 69, 0.45),
+    inset 0 0 26px -14px rgba(201, 154, 69, 0.4);
+}
+
+.vignette {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 52%,
+    rgba(16, 13, 10, 0.88) 100%
+  );
+}
+
+.wood-door {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.22) 0 2px,
+      transparent 2px 88px
+    ),
+    linear-gradient(100deg, #2b1d10 0%, #1c1209 55%, #251a11 100%);
+}
+
+.petal {
+  position: absolute;
+  top: -6vh;
+  border-radius: 70% 70% 70% 70% / 85% 85% 60% 60%;
+  background: linear-gradient(160deg, #e8891c, #c99a45);
+  will-change: transform;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(1.14) translateY(-1px);
+  }
+  50% {
+    transform: scaleY(0.92);
+  }
+  75% {
+    transform: scaleY(1.07);
+  }
+}
+
+.flame-anim {
+  animation: flicker 1.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 48s linear infinite;
+}
+
+@keyframes eq {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: eq 0.9s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rays-spin {
+  animation: spin-slow 90s linear infinite;
+}
+
+.rays {
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(217, 164, 65, 0.12) 0deg 3deg,
+    transparent 3deg 16deg
+  );
+  mask-image: radial-gradient(ellipse at 50% 100%, black 0%, transparent 62%);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .flame-anim,
+  .animate-marquee,
+  .text-gold,
+  .eq-bar,
+  .rays-spin {
+    animation: none !important;
+  }
 }
