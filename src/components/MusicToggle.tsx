@@ -33,7 +33,7 @@ export default function MusicToggle() {
       onClick={toggle}
       aria-label={on ? "Turn music off" : "Turn music on"}
       title={on ? "Music on" : "Music off"}
-      className="gold-glow fixed right-5 bottom-5 z-[80] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-[#C99A45]/50 bg-[#100D0A]/70 backdrop-blur-md transition-colors duration-300 hover:border-[#D9A441]"
+      className="gold-glow fixed right-4 bottom-4 z-[80] flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-[#C99A45]/50 bg-[#100D0A]/70 backdrop-blur-md transition-colors duration-300 hover:border-[#D9A441] sm:right-5 sm:bottom-5 sm:h-12 sm:w-12"
       initial={{ opacity: 0, scale: 0.6 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 2.5, duration: 0.8 }}

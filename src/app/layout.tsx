@@ -31,7 +31,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "નવા વર્ષના રામ રામ • Happy New Year ",
   description:
-    "નવા વર્ષના રામ રામ — Happy New Year . With love, respect and best wishes, Khushal Nadiyapara & Family.",
+    "નવા વર્ષના રામ રામ — Happy New Year. With love, respect and best wishes, Khushal Nadiyapara & Family.",
   openGraph: {
     title: "નવા વર્ષના રામ રામ | Happy New Year",
     description:

@@ -53,7 +53,7 @@ export default function Finale() {
   return (
     <section
       data-testid="finale-section"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden py-20"
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden py-14 sm:py-20"
     >
       <div
         className="absolute inset-0"
@@ -72,16 +72,16 @@ export default function Finale() {
 
       <TempleSilhouette />
 
-      <div className="absolute bottom-5 left-1/2 z-[5] flex -translate-x-1/2 items-end gap-5">
+      <div className="absolute bottom-4 left-1/2 z-[5] flex -translate-x-1/2 items-end gap-3 sm:bottom-5 sm:gap-5">
         {[0, 1, 2, 3, 4].map((i) => (
           <MiniDiya key={i} />
         ))}
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 pb-16 text-center sm:px-6 sm:pb-10">
         <MaskedLine>
           <h2
-            className="text-gold-static text-4xl leading-[1.25] font-semibold sm:text-5xl md:text-6xl"
+            className="text-gold-static text-[1.75rem] leading-[1.3] font-semibold sm:text-5xl md:text-6xl"
             style={{
               fontFamily:
                 '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -93,7 +93,7 @@ export default function Finale() {
 
         <FadeUp delay={0.2}>
           <p
-            className="mx-auto mt-10 max-w-3xl text-lg leading-[1.9] text-[#F5E6C8]/90 md:text-2xl"
+            className="mx-auto mt-6 max-w-3xl text-base leading-[1.75] text-[#F5E6C8]/90 sm:mt-10 sm:text-lg sm:leading-[1.9] md:text-2xl"
             style={{
               fontFamily:
                 '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -105,16 +105,16 @@ export default function Finale() {
         </FadeUp>
 
         <FadeUp delay={0.3}>
-          <p className="mx-auto mt-6 max-w-2xl text-base text-[#F5E6C8]/65 italic md:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-[#F5E6C8]/65 italic sm:mt-6 sm:text-base md:text-lg">
             May God bless you and your family with happiness, good health, peace,
             prosperity and success throughout the year.
           </p>
         </FadeUp>
 
-        <FadeUp delay={0.45} className="mt-10">
+        <FadeUp delay={0.45} className="mt-7 sm:mt-10">
           <div className="signature-highlight signature-highlight--finale mx-auto">
             <p
-              className="text-gold text-3xl leading-tight font-bold sm:text-4xl md:text-5xl"
+              className="text-gold text-2xl leading-tight font-bold sm:text-4xl md:text-5xl"
               style={{
                 fontFamily:
                   '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -123,7 +123,7 @@ export default function Finale() {
               Khushal Nadiyapara
             </p>
             <p
-              className="text-gold mt-2 text-2xl leading-tight font-bold sm:text-3xl md:text-4xl"
+              className="text-gold mt-1.5 text-xl leading-tight font-bold sm:mt-2 sm:text-3xl md:text-4xl"
               style={{
                 fontFamily:
                   '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -131,13 +131,13 @@ export default function Finale() {
             >
               & Family ❤️
             </p>
-            <p className="mt-5 text-[11px] tracking-[0.55em] text-[#F5E6C8]/75 uppercase md:text-xs">
+            <p className="mt-3 text-[13px] font-bold tracking-[0.25em] text-[#F5E6C8]/75 uppercase sm:mt-5 sm:text-[15px] md:text-lg">
               AND BY NADIYAPARA FAMILY
             </p>
           </div>
-          <Divider className="mt-10" />
+          <Divider className="mt-7 sm:mt-10" />
           <p
-            className="text-gold mt-8 text-xl font-semibold md:text-2xl"
+            className="text-gold mt-5 text-lg font-semibold sm:mt-8 sm:text-xl md:text-2xl"
             style={{
               fontFamily:
                 '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -149,13 +149,13 @@ export default function Finale() {
 
         <FadeUp delay={0.6}>
           <p
-            className="mt-10 text-[10px] tracking-[0.4em] text-[#C99A45]/75 uppercase"
+            className="mt-7 text-[10px] tracking-[0.35em] text-[#C99A45]/75 uppercase sm:mt-10"
             style={{
               textShadow:
                 "0 1px 6px rgba(16,13,10,1), 0 0 14px rgba(16,13,10,1)",
             }}
           >
-            Crafted with love • Happy New Year 
+            Crafted with love • Happy New Year
           </p>
         </FadeUp>
       </div>

@@ -253,11 +253,11 @@ export default function Intro({
               initial={{ opacity: 0, y: 18, scale: 0.92 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 1.1, delay: 0.15, ease: EASE }}
-              className="relative mb-10 flex flex-col items-center"
+              className="relative mb-7 flex flex-col items-center sm:mb-10"
             >
-              <DiyaSvg className="h-[4.5rem] w-[5.5rem] drop-shadow-[0_0_22px_rgba(217,164,65,0.65)]" />
+              <DiyaSvg className="h-14 w-[4.25rem] drop-shadow-[0_0_22px_rgba(217,164,65,0.65)] sm:h-[4.5rem] sm:w-[5.5rem]" />
               <p
-                className="text-gold mt-5 text-lg tracking-wide sm:text-xl"
+                className="text-gold mt-4 text-base tracking-wide sm:mt-5 sm:text-xl"
                 style={{
                   fontFamily:
                     '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -265,7 +265,7 @@ export default function Intro({
               >
                 નવા વર્ષના રામ રામ
               </p>
-              <p className="mt-2 font-display text-sm tracking-[0.28em] text-[#C99A45]/7 uppercase">
+              <p className="mt-1.5 font-display text-xs tracking-[0.28em] text-[#C99A45]/7 uppercase sm:mt-2 sm:text-sm">
                 Happy New Year 2027
               </p>
             </motion.div>
@@ -279,12 +279,12 @@ export default function Intro({
               transition={{ duration: 0.9, delay: 0.45, ease: EASE }}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="gold-glow group relative overflow-hidden rounded-full border border-[#C99A45]/65 px-10 py-4 text-sm tracking-[0.35em] text-[#F5E6C8] uppercase transition-colors duration-500 hover:text-[#100D0A] md:text-base"
+              className="gold-glow group relative overflow-hidden rounded-full border border-[#C99A45]/65 px-7 py-3.5 text-xs tracking-[0.3em] text-[#F5E6C8] uppercase transition-colors duration-500 hover:text-[#100D0A] sm:px-10 sm:py-4 sm:text-sm sm:tracking-[0.35em] md:text-base"
             >
               <span className="absolute inset-0 translate-y-full bg-gradient-to-r from-[#C99A45] to-[#D9A441] transition-transform duration-500 group-hover:translate-y-0" />
-              <span className="relative flex items-center gap-3">
+              <span className="relative flex items-center gap-2.5 sm:gap-3">
                 Enter Celebration
-                <Volume2 className="h-4 w-4 opacity-70" />
+                {/* <Volume2 className="h-3.5 w-3.5 opacity-70 sm:h-4 sm:w-4" /> */}
               </span>
             </motion.button>
 
@@ -292,7 +292,7 @@ export default function Intro({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="mt-8 flex flex-col items-center gap-3"
+              className="mt-6 flex flex-col items-center gap-2.5 sm:mt-8 sm:gap-3"
             >
               <p className="text-[11px] tracking-[0.32em] text-[#C99A45]/55 uppercase">
                 Best experienced with sound

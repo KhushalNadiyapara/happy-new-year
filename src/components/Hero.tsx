@@ -11,7 +11,7 @@ const HeroCanvas = lazy(() => import("./three/HeroCanvas"));
 
 const GUJ_H1 = {
   fontFamily: '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
-  fontSize: "clamp(2.55rem, min(9.5vw, 11vh), 6.5rem)",
+  fontSize: "clamp(2.2rem, min(8.6vw, 9.5vh), 6.5rem)",
 };
 
 export default function Hero({ active }: { active: boolean }) {
@@ -24,7 +24,7 @@ export default function Hero({ active }: { active: boolean }) {
   return (
     <section
       data-testid="hero-section"
-      className="relative flex min-h-[100svh] items-center justify-center overflow-x-clip"
+      className="relative flex min-h-[100svh] items-start justify-center overflow-x-clip sm:items-center"
     >
       <div
         className="absolute inset-0"
@@ -40,10 +40,18 @@ export default function Hero({ active }: { active: boolean }) {
       </ErrorBoundary>
       <div className="vignette pointer-events-none absolute inset-0 z-[5]" />
 
-      {/* Clear zone between temple beam (top) and diya (bottom) */}
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-5 pt-[18vh] pb-[26vh] text-center sm:px-6 sm:pt-[16vh] sm:pb-[28vh] md:pt-[14vh]">
+      {/* Soft veil so signature stays readable above diya on mobile */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[6] h-[38%] sm:hidden"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(16,13,10,0.72) 0%, rgba(16,13,10,0.28) 45%, transparent 100%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pt-[16vh] pb-[34vh] text-center sm:px-6 sm:pt-[16vh] sm:pb-[26vh] md:pt-[14vh] md:pb-[28vh]">
         <h1
-          className="text-gold-static leading-[1.15] font-semibold"
+          className="text-gold-static leading-[1.1] font-semibold"
           style={{
             ...GUJ_H1,
             textShadow: "0 0 48px rgba(201,154,69,0.38)",
@@ -59,7 +67,7 @@ export default function Hero({ active }: { active: boolean }) {
 
         <motion.p
           {...show(0.7)}
-          className="text-gold mt-3 font-display text-2xl italic font-medium tracking-wide sm:mt-4 sm:text-3xl md:text-4xl"
+          className="text-gold mt-2 font-display text-xl italic font-medium tracking-wide sm:mt-3 sm:text-3xl md:text-4xl"
           style={{ textShadow: "0 2px 18px rgba(16,13,10,0.85)" }}
         >
           Happy New Year
@@ -67,15 +75,15 @@ export default function Hero({ active }: { active: boolean }) {
 
         <motion.p
           {...show(0.85)}
-          className="mt-3 text-sm tracking-[0.32em] text-[#C99A45]/90 uppercase sm:mt-4 sm:text-base md:text-lg"
+          className="mt-2 max-w-[20rem] text-[0.7rem] leading-relaxed tracking-[0.18em] text-[#C99A45]/90 uppercase sm:mt-3 sm:max-w-none sm:text-sm sm:tracking-[0.32em] md:text-base md:text-lg"
         >
-          A New Beginning&nbsp;&nbsp;•&nbsp;&nbsp;Endless
-          Blessings&nbsp;&nbsp;•&nbsp;&nbsp;Infinite Happiness
+          A New Beginning&nbsp;•&nbsp;Endless Blessings&nbsp;•&nbsp;Infinite
+          Happiness
         </motion.p>
 
         <motion.p
           {...show(1.1)}
-          className="mx-auto mt-4 max-w-3xl text-[1.05rem] leading-relaxed text-[#F5E6C8]/95 sm:mt-5 sm:text-xl md:text-2xl"
+          className="mx-auto mt-3 max-w-3xl text-[1.05rem] leading-snug text-[#F5E6C8]/95 sm:mt-4 sm:text-xl sm:leading-relaxed md:text-2xl"
           style={{
             fontFamily:
               '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -88,27 +96,33 @@ export default function Hero({ active }: { active: boolean }) {
 
         <motion.p
           {...show(1.22)}
-          className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-[#F5E6C8]/78 italic sm:text-lg md:text-xl"
+          className="mx-auto mt-2 max-w-3xl text-[0.95rem] leading-snug text-[#F5E6C8]/78 italic sm:mt-3 sm:text-lg sm:leading-relaxed md:text-xl"
           style={{ textShadow: "0 1px 14px rgba(16,13,10,0.9)" }}
         >
           May this New Year bring endless happiness, peace, prosperity and
           countless blessings into your life.
         </motion.p>
 
-        <motion.div {...show(1.4)} className="mt-5 sm:mt-7">
+        <motion.div
+          {...show(1.4)}
+          className="mt-3.5 flex w-full max-w-[21rem] flex-col items-center sm:mt-6 sm:max-w-none"
+        >
           <Divider />
-          <p className="mt-4 text-xs tracking-[0.3em] text-[#F5E6C8]/55 uppercase md:text-sm">
+          <p className="mt-2.5 text-[0.7rem] tracking-[0.26em] text-[#F5E6C8]/55 uppercase sm:mt-4 sm:text-xs md:text-sm">
             With Love, Respect & Best Wishes
           </p>
-          <div className="signature-highlight signature-highlight--hero mt-3 sm:mt-4">
+          <div className="signature-highlight signature-highlight--hero mt-2 w-full sm:mt-3 sm:w-auto">
             <p
-              className="text-gold text-[1.55rem] leading-tight font-bold sm:text-[1.85rem] md:text-3xl lg:text-[2.65rem]"
+              className="text-gold text-[1.2rem] leading-[1.25] font-bold sm:text-[1.85rem] md:text-3xl lg:text-[2.65rem]"
               style={{
                 fontFamily:
                   '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
               }}
             >
-              Khushal Nadiyapara & Family ❤️
+              <span className="block sm:inline">Khushal Nadiyapara</span>
+              <span className="block sm:inline">
+                <span className="hidden sm:inline"> </span>& Family ❤️
+              </span>
             </p>
           </div>
         </motion.div>

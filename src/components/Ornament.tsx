@@ -67,9 +67,9 @@ export function Divider({ className = "" }: { className?: string }) {
       className={`flex items-center justify-center gap-3 ${className}`}
       aria-hidden="true"
     >
-      <span className="h-px w-14 bg-gradient-to-r from-transparent to-[#C99A45]/70 md:w-24" />
-      <DiyaMark className="h-5 w-5 text-[#D9A441]" />
-      <span className="h-px w-14 bg-gradient-to-l from-transparent to-[#C99A45]/70 md:w-24" />
+      <span className="h-px w-10 bg-gradient-to-r from-transparent to-[#C99A45]/70 sm:w-14 md:w-24" />
+      <DiyaMark className="h-4 w-4 text-[#D9A441] sm:h-5 sm:w-5" />
+      <span className="h-px w-10 bg-gradient-to-l from-transparent to-[#C99A45]/70 sm:w-14 md:w-24" />
     </div>
   );
 }

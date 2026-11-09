@@ -85,21 +85,21 @@ function TiltCard({
       onMouseLeave={onLeave}
       style={{ rotateX: srx, rotateY: sry, transformPerspective: 900 }}
       whileHover={{ y: -6 }}
-      className="group gold-hairline relative h-full rounded-[4px] bg-[#181008]/80 p-8 backdrop-blur-sm transition-shadow duration-500 hover:gold-glow md:p-10"
+      className="group gold-hairline relative h-full rounded-[4px] bg-[#181008]/80 p-5 backdrop-blur-sm transition-shadow duration-500 hover:gold-glow sm:p-8 md:p-10"
     >
       {CORNERS.map((c, i) => (
         <span
           key={i}
-          className={`absolute h-3.5 w-3.5 border-[#C99A45]/60 transition-colors duration-500 group-hover:border-[#D9A441] ${c}`}
+          className={`absolute h-3 w-3 border-[#C99A45]/60 transition-colors duration-500 group-hover:border-[#D9A441] sm:h-3.5 sm:w-3.5 ${c}`}
         />
       ))}
-      <div className="flex flex-col items-center gap-5 text-center">
-        <span className="flex h-14 w-14 items-center justify-center rounded-full border border-[#C99A45]/50 text-[#D9A441] transition-all duration-500 group-hover:scale-110 group-hover:border-[#D9A441]">
-          <Icon className="h-6 w-6" />
+      <div className="flex flex-col items-center gap-3.5 text-center sm:gap-5">
+        <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C99A45]/50 text-[#D9A441] transition-all duration-500 group-hover:scale-110 group-hover:border-[#D9A441] sm:h-14 sm:w-14">
+          <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
         </span>
         <div>
           <h3
-            className="text-gold text-2xl font-semibold md:text-[1.7rem]"
+            className="text-gold text-xl font-semibold sm:text-2xl md:text-[1.7rem]"
             style={{
               fontFamily:
                 '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -107,11 +107,11 @@ function TiltCard({
           >
             {wish.title}
           </h3>
-          <p className="mt-1.5 text-[11px] tracking-[0.4em] text-[#F5E6C8]/50 uppercase">
+          <p className="mt-1 text-[10px] tracking-[0.35em] text-[#F5E6C8]/50 uppercase sm:mt-1.5 sm:text-[11px]">
             {wish.sub}
           </p>
         </div>
-        <p className="text-base leading-relaxed text-[#F5E6C8]/75 italic md:text-[1.05rem]">
+        <p className="text-sm leading-relaxed text-[#F5E6C8]/75 italic sm:text-base md:text-[1.05rem]">
           {wish.text}
         </p>
       </div>
@@ -123,7 +123,7 @@ export default function Wishes() {
   return (
     <section
       data-testid="wishes-section"
-      className="relative overflow-hidden py-16 md:py-24"
+      className="relative overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <div
         className="absolute inset-0"
@@ -132,12 +132,12 @@ export default function Wishes() {
             "radial-gradient(ellipse 50% 40% at 50% 30%, rgba(217,164,65,0.08), transparent 70%)",
         }}
       />
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHead
           eyebrow="Wishes For Everyone"
           title="આ નવા વર્ષે દરેકને મળે..."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3">
           {WISHES.map((w, i) => (
             <FadeUp
               key={i}

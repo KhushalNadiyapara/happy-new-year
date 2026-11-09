@@ -19,7 +19,7 @@ export default function Blessings() {
   return (
     <section
       data-testid="blessings-section"
-      className="relative overflow-hidden py-16 md:py-24"
+      className="relative overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <div
         className="absolute inset-0"
@@ -36,14 +36,14 @@ export default function Blessings() {
         </Suspense>
       </ErrorBoundary>
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6">
         <SectionHead
           eyebrow="Divine Blessings"
           title="ભગવાનના આશીર્વાદ સદાય તમારી સાથે રહે 🙏"
         />
 
-        <FadeUp delay={0.15} className="mt-10">
-          <div className="gold-hairline gold-glow relative rounded-[4px] bg-[#181008]/70 px-7 py-10 backdrop-blur-sm md:px-14 md:py-14">
+        <FadeUp delay={0.15} className="mt-6 sm:mt-10">
+          <div className="gold-hairline gold-glow relative rounded-[4px] bg-[#181008]/70 px-4 py-7 backdrop-blur-sm sm:px-7 sm:py-10 md:px-14 md:py-14">
             {[
               "top-2 left-2 border-t border-l",
               "top-2 right-2 border-t border-r",
@@ -52,11 +52,11 @@ export default function Blessings() {
             ].map((c, i) => (
               <span
                 key={i}
-                className={`absolute h-4 w-4 border-[#C99A45]/70 ${c}`}
+                className={`absolute h-3 w-3 border-[#C99A45]/70 sm:h-4 sm:w-4 ${c}`}
               />
             ))}
             <div
-              className="space-y-5 text-center text-lg leading-[1.9] text-[#F5E6C8]/90 md:text-2xl"
+              className="space-y-3.5 text-center text-base leading-[1.75] text-[#F5E6C8]/90 sm:space-y-5 sm:text-lg sm:leading-[1.9] md:text-2xl"
               style={{
                 fontFamily:
                   '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -66,14 +66,16 @@ export default function Blessings() {
                 <p
                   key={i}
                   className={
-                    i === 0 ? "text-gold text-2xl font-semibold md:text-3xl" : ""
+                    i === 0
+                      ? "text-gold text-xl font-semibold sm:text-2xl md:text-3xl"
+                      : ""
                   }
                 >
                   {line}
                 </p>
               ))}
             </div>
-            <p className="mt-9 text-center text-base leading-relaxed text-[#C99A45]/90 italic md:text-lg">
+            <p className="mt-6 text-center text-sm leading-relaxed text-[#C99A45]/90 italic sm:mt-9 sm:text-base md:text-lg">
               &ldquo;May every broken heart find peace, every struggling soul
               find strength, and every family be blessed with love and
               happiness.&rdquo;

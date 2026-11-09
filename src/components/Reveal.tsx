@@ -84,19 +84,22 @@ export function SectionHead({
   return (
     <div className="text-center">
       <FadeUp>
-        <p className="mb-5 text-[11px] font-semibold tracking-[0.45em] text-[#C99A45]/85 uppercase md:text-xs">
+        <p className="mb-3 text-[10px] font-semibold tracking-[0.4em] text-[#C99A45]/85 uppercase sm:mb-5 sm:text-[11px] md:text-xs">
           {eyebrow}
         </p>
       </FadeUp>
       <MaskedLine>
         <h2
-          className="text-gold text-3xl leading-[1.2] font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
-          style={{ fontFamily: '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif' }}
+          className="text-gold text-[1.65rem] leading-[1.25] font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
+          style={{
+            fontFamily:
+              '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
+          }}
         >
           {title}
         </h2>
       </MaskedLine>
-      <Divider className="mt-8" />
+      <Divider className="mt-5 sm:mt-8" />
     </div>
   );
 }

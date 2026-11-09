@@ -15,7 +15,7 @@ export default function NewBeginning() {
   return (
     <section
       data-testid="new-beginning-section"
-      className="relative overflow-hidden py-16 md:py-28"
+      className="relative overflow-hidden py-12 sm:py-16 md:py-28"
     >
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[70vh] overflow-hidden">
         <div
@@ -39,14 +39,14 @@ export default function NewBeginning() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6">
         <SectionHead
           eyebrow="New Beginning"
           title="નવું વર્ષ, નવી આશા, નવી શરૂઆત ❤️"
         />
 
         <div
-          className="mt-10 space-y-4 text-center text-lg leading-[1.9] text-[#F5E6C8]/90 md:text-2xl"
+          className="mt-6 space-y-3 text-center text-base leading-[1.75] text-[#F5E6C8]/90 sm:mt-10 sm:space-y-4 sm:text-lg sm:leading-[1.9] md:text-2xl"
           style={{
             fontFamily:
               '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
@@ -59,17 +59,17 @@ export default function NewBeginning() {
           ))}
         </div>
 
-        <FadeUp delay={0.2} className="mt-12 text-center">
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#C99A45]/90 italic md:text-lg">
+        <FadeUp delay={0.2} className="mt-8 text-center sm:mt-12">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#C99A45]/90 italic sm:text-base md:text-lg">
             &ldquo;Leave behind the pain, carry forward the memories, forgive
             more, love deeper and welcome every new beginning with hope.&rdquo;
           </p>
         </FadeUp>
 
-        <div className="mt-10 px-2 text-center md:mt-12">
+        <div className="mt-7 px-1 text-center sm:mt-10 md:mt-12">
           <MaskedLine>
             <span
-              className="text-gold mx-auto block max-w-4xl text-xl leading-[1.75] font-semibold sm:text-2xl md:text-3xl lg:text-[2.6rem]"
+              className="text-gold mx-auto block max-w-4xl text-lg leading-[1.65] font-semibold sm:text-2xl sm:leading-[1.75] md:text-3xl lg:text-[2.6rem]"
               style={{
                 fontFamily:
                   '"Noto Serif Gujarati", var(--font-noto-serif-gujarati), serif',
